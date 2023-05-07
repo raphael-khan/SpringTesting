@@ -1,10 +1,16 @@
 package com.amigoscode.testing.customer;
 
+import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 public class Customer {
+
     private UUID id;
+    @NotBlank
+
     private String name;
+
+    @NotBlank
     private String phoneNumber;
 
     public Customer(UUID id, String name, String phoneNumber) {
@@ -12,11 +18,9 @@ public class Customer {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
-
     public UUID getId() {
         return id;
     }
-
     public void setId(UUID id) {
         this.id = id;
     }
